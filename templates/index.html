@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Dashboard</title>
+    <style>
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+form input, form button {
+    padding: 8px;
+    margin: 5px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Sales Data</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Product</th>
+        <th>Region</th>
+        <th>Category</th>
+        <th>Sales</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{ row.id }}</td>
+        <td>{{ row.product }}</td>
+        <td>{{ row.region }}</td>
+        <td>{{ row.category }}</td>
+        <td>{{ row.sales }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+<h2>Add New Record</h2>
+
+<form method="POST" action="/add">
+    <input type="text" name="product" placeholder="Product" required>
+    <input type="text" name="region" placeholder="Region" required>
+    <input type="text" name="category" placeholder="Category" required>
+    <input type="number" name="sales" placeholder="Sales" required>
+    <button type="submit">Add</button>
+</form>
+
+
+</body>
+</html>
