@@ -8,11 +8,11 @@ This project is a full stack web application built using Flask, SQLite, and HTML
 
 Features
 
-* 📊 View sales data in a table
-* ➕ Add new records from the browser
-* ❌ Delete records
-* 🔄 Real-time updates
-* 🗄️ Data stored in SQLite database
+*  View sales data in a table
+*  Add new records from the browser
+*  Delete records
+*  Real-time updates
+*  Data stored in SQLite database
 
 ---
 
